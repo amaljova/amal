@@ -1,0 +1,199 @@
+﻿html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+html {
+    overflow-x: hidden
+}
+
+
+/*side bar*/
+
+.sidebar {
+    height: 100%;
+    width: 120px;
+    background-color: #222;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
+}
+
+
+/*bar item*/
+
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.bar .bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0
+}
+
+
+/*row padding*/
+
+h1 {
+    font-size: 36px;
+    color: rgb(141, 67, 238)
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 10px 0
+}
+
+.wide {
+    letter-spacing: 4px
+}
+
+
+/*color*/
+
+.white,
+.hover-white:hover {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.black,
+.hover-black:hover {
+    color: #fff!important;
+    background-color: #262626!important
+}
+
+.light-grey,
+.hover-light-grey:hover,
+.light-gray,
+.hover-light-gray:hover {
+    color: #000!important;
+    background-color: #f1f1f1!important
+}
+
+.dark-grey,
+.hover-dark-grey:hover,
+.dark-gray,
+.hover-dark-gray:hover {
+    color: #fff!important;
+    background-color: #616161!important
+}
+
+
+/*text hover*/
+
+.text-green,
+.hover-text-green:hover {
+    color: #4CAF50!important
+}
+
+.text-white,
+.hover-text-white:hover {
+    color: #fff!important
+}
+
+.text-grey,
+.hover-text-grey:hover,
+.text-gray,
+.hover-text-gray:hover {
+    color: #757575!important
+}
+
+.text-light-grey,
+.hover-text-light-grey:hover,
+.text-light-gray,
+.hover-text-light-gray:hover {
+    color: #f1f1f1!important
+}
+
+
+/*button*/
+
+.button:hover {
+    color: #000!important;
+    background-color: #ccc!important
+}
+
+.row-padding img {
+    margin-bottom: 12px
+}
+
+s
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
+#main {
+    margin-left: 120px
+}
+
+
+/* Remove margins from "page content" on small screens */
+
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
+.padding-64 {
+    padding-top: 64px!important;
+    padding-bottom: 64px!important
+}
+
+.padding-32 {
+    padding-top: 32px!important;
+    padding-bottom: 32px!important
+}
+
+.padding-16 {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important
+}
