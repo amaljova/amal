@@ -3,8 +3,17 @@
 <title>Amal Joseph Varghese</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="framework.css">
+<link id="favicon" rel="shortcut icon" type="image/png" href="amal_icon.jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="main.css">
+<style>
+    .black_N_white {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 -9.0 */
+        filter: grayscale(100%);
+    }
+</style>
 
 <body class="black">
 
@@ -12,19 +21,15 @@
     <nav class="sidebar bar-block small hide-small center">
         <img src="amal_icon.jpg" style="width:100%">
         <a href="#" class="bar-item button padding-large black">
-            <i class="xxlarge"></i>
             <p>HOME</p>
         </a>
         <a href="#about" class="bar-item button padding-large hover-black">
-            <i class="xxlarge"></i>
             <p>ABOUT</p>
         </a>
         <a href="#photos" class="bar-item button padding-large hover-black">
-            <i class="xxlarge"></i>
             <p>ART</p>
         </a>
         <a href="#contact" class="bar-item button padding-large hover-black">
-            <i class="xxlarge"></i>
             <p>CONTACT</p>
         </a>
     </nav>
@@ -45,7 +50,7 @@
         <header class="container padding-32 center black" id="home">
             <h1 class="jumbo"><span class="hide-small">I'm</span> Amal Joseph Varghese</h1>
             <p>Bioinformatician, Photographer and Logo Designer</p>
-            <img src="amal.jpg" alt="boy" class="image opacity" width="992" height="1108">
+            <img src="amal.jpg" alt="boy" class="image opacity black_N_white" width="992" height="1108">
         </header>
 
         <!-- About Section -->
@@ -122,17 +127,14 @@
             </div><br>
             <p>Lets get in touch. Send me a message:</p>
 
-            <form action="/action_page.php" target="_blank">
-                <p><input class="input padding-16" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
-                <p><input class="input padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-                <p><input class="input padding-16" type="text" placeholder="Message" required name="Message"></p>
-                <p>
-                    <button class="button light-grey padding-large" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-                </p>
+            <form id="submit-form" action="">
+                <p><input class="input padding-16" type="text" id="name" placeholder="Name" required name="Name"></p>
+                <p><input class="input padding-16" type="text" id="email" placeholder="Email" required name="Email"></p>
+                <p><input class="input padding-16" type="text" id="subject" placeholder="Subject" required name="Subject"></p>
+                <p><input class="input padding-16" type="text" id="message" placeholder="Message" required name="Message"></p>
+                <p><button class="button light-grey padding-large" type="submit">SEND MESSAGE</button></p>
             </form>
+
             <!-- End Contact Section -->
         </div>
 
@@ -144,6 +146,26 @@
 
         <!-- END PAGE CONTENT -->
     </div>
+
+    <script>
+        $("#submit-form").submit((e) => {
+            e.preventDefault()
+            $.ajax({
+                url: "",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function(response) {
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                        //window.location.href="https://google.com"
+                },
+                error: function(err) {
+                    alert("Something Error")
+
+                }
+            })
+        })
+    </script>
 
 </body>
 
